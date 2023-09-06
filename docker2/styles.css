@@ -1,0 +1,68 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.icons {
+    text-align: center;
+    padding: 20px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0078d4;
+    color: #fff;
+}
