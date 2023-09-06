@@ -9,7 +9,7 @@ FROM nginx:latest
 # RUN echo 'HELLO FROM DOCKER NGINX ON PORT 8000' > /usr/share/nginx/html/index.html
 
 COPY * /usr/share/nginx/html/
-COPY example.com.conf /etc/nginx/nginx.conf
+# COPY example.com.conf /etc/nginx/nginx.conf
 
 
 # Expose port 80 to allow incoming web traffic
