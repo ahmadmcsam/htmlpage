@@ -5,6 +5,9 @@ FROM nginx:latest
 # COPY nginx.conf /etc/nginx/nginx.conf
 # COPY sites-available/my-site /etc/nginx/sites-available/
 
+# Create a custom HTML file with your message
+RUN echo 'HELLO FROM DOCKER NGINX ON PORT 8000' > /usr/share/nginx/html/index.html
+
 # Expose port 80 to allow incoming web traffic
 EXPOSE 8000
 
