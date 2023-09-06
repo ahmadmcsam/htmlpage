@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Info</title>
-</head>
-<body>
-    <h1>System Information</h1>
-    <p id="userAgent">User Agent: Loading...</p>
+    <title>System Information</title>
+    <script type="text/javascript">
+        function displaySystemInfo() {
+            // Get the hostname
+            var hostname = window.location.hostname;
 
-    <script>
-        // Get and display the user agent string
-        document.getElementById('userAgent').textContent = 'User Agent: ' + navigator.userAgent;
+            // Get the IP address
+            var ipAddress = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
+
+            // Get the current date and time
+            var dateTime = new Date();
+
+            // Get the system uptime
+            var uptime = "<?php echo shell_exec('uptime'); ?>";
+
+            // Get browser information
+            var browserInfo = "Browser: " + navigator.userAgent;
+
+            // Display the information
+            document.getElementById('hostname').innerHTML = "Hostname: " + hostname;
+            document.getElementById('ipAddress').innerHTML = "IP Address: " + ipAddress;
+            document.getElementById('dateTime').innerHTML = "Date and Time: " + dateTime;
+            document.getElementById('uptime').innerHTML = "System Uptime: " + uptime;
+            document.getElementById('browserInfo').innerHTML = browserInfo;
+        }
     </script>
+</head>
+<body onload="displaySystemInfo()">
+    <h1>System Information</h1>
+    <p id="hostname"></p>
+    <p id="ipAddress"></p>
+    <p id="dateTime"></p>
+    <p id="uptime"></p>
+    <p id="browserInfo"></p>
 </body>
 </html>
