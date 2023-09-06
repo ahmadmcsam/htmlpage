@@ -1,1 +1,0 @@
-(self.webpackChunkmonolith=self.webpackChunkmonolith||[]).push([[179],{83894:(o,s,e)=>{e.e(3595).then(e.bind(e,53595)).catch(n=>console.error(n))}},o=>{o(o.s=83894)}]);
