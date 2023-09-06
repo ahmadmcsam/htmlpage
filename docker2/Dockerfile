@@ -8,10 +8,9 @@ FROM nginx:latest
 # Create a custom HTML file with your message
 # RUN echo 'HELLO FROM DOCKER NGINX ON PORT 8000' > /usr/share/nginx/html/index.html
 
-COPY ./* /tmp/
-COPY /tmp/* /usr/share/nginx/html/
-#COPY ./* /usr/share/nginx/html/
 
+COPY ./* /usr/share/nginx/html/
+COPY ./images /usr/share/nginx/html/images
 
 # COPY example.com.conf /etc/nginx/nginx.conf
 
