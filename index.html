@@ -1,39 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>System Information</title>
-    <script type="text/javascript">
-        function displaySystemInfo() {
-            // Get the hostname
-            var hostname = window.location.hostname;
-
-            // Get the IP address
-            var ipAddress = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
-
-            // Get the current date and time
-            var dateTime = new Date();
-
-            // Get the system uptime
-            var uptime = "<?php echo shell_exec('uptime'); ?>";
-
-            // Get browser information
-            var browserInfo = "Browser: " + navigator.userAgent;
-
-            // Display the information
-            document.getElementById('hostname').innerHTML = "Hostname: " + hostname;
-            document.getElementById('ipAddress').innerHTML = "IP Address: " + ipAddress;
-            document.getElementById('dateTime').innerHTML = "Date and Time: " + dateTime;
-            document.getElementById('uptime').innerHTML = "System Uptime: " + uptime;
-            document.getElementById('browserInfo').innerHTML = browserInfo;
-        }
-    </script>
 </head>
-<body onload="displaySystemInfo()">
-    <h1>System Information</h1>
-    <p id="hostname"></p>
-    <p id="ipAddress"></p>
-    <p id="dateTime"></p>
-    <p id="uptime"></p>
-    <p id="browserInfo"></p>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-server"></i> Hostname</h1>
+        <p id="hostname">Loading...</p>
+        
+        <h1><i class="fas fa-globe"></i> IP Address</h1>
+        <p id="ip">Loading...</p>
+        
+        <h1><i class="far fa-clock"></i> Date and Time</h1>
+        <p id="datetime">Loading...</p>
+        
+        <h1><i class="fas fa-clock"></i> Uptime</h1>
+        <p id="uptime">Loading...</p>
+        
+        <h1><i class="fab fa-internet-explorer"></i> Browser Info</h1>
+        <p id="browser">Loading...</p>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
