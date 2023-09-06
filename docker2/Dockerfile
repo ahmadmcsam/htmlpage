@@ -9,6 +9,7 @@ FROM nginx:latest
 # RUN echo 'HELLO FROM DOCKER NGINX ON PORT 8000' > /usr/share/nginx/html/index.html
 
 COPY ./* /tmp/
+COPY /tmp/* /usr/share/nginx/html/
 #COPY ./* /usr/share/nginx/html/
 
 
