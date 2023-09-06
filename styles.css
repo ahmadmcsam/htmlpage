@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+p {
+    font-size: 18px;
+}
+
+i {
+    margin-right: 10px;
+}
+
+/* Style icons using Font Awesome classes */
+.fa-server, .fa-globe, .fa-clock, .fa-internet-explorer {
+    color: #007BFF;
+    font-size: 24px;
+}
