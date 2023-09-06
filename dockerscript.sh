@@ -1,19 +1,25 @@
 #!/bin/bash
 
-# Create a Dockerfile for Ubuntu image
-echo "FROM ubuntu:latest" > Dockerfile
-echo "RUN apt-get update && apt-get install -y nginx" >> Dockerfile
+# Step 1: Create a Dockerfile
+cat <<EOF > Dockerfile
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y nginx
+CMD ["nginx", "-g", "daemon off;"]
+EOF
 
-# Build the Docker image
-docker build -t my-ubuntu-nginx .
+# Step 2: Build the Docker image
+docker build -t my-nginx-image .
 
-# Run a container from the created image on port 9000
-docker run -d -p 9000:80 my-ubuntu-nginx
+# Step 3: Run a container from the created image
+docker run -d -p 9000:80 --name my-nginx-container my-nginx-image
 
-# Check Docker containers
-docker ps > docker_ps.txt
+echo "Container is running. Press Enter to stop it..."
+read -r
 
-# Clean up: Remove the Dockerfile (optional)
-rm Dockerfile
+# Step 4: Stop the running container
+docker stop my-nginx-container
 
-echo "Docker image built and container running on port 9000. Container information exported to docker_ps.txt."
+# Step 5: Check running containers
+docker ps > docker_ps_output.txt
+
+echo "Container stopped. Docker PS data exported to docker_ps_output.txt"
