@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Step 1: Create a Dockerfile
 cat <<EOF > Dockerfile
 FROM ubuntu:latest
