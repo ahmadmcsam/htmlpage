@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Define and export environment variables
+export MY_VARIABLE="some_value"
+export ANOTHER_VARIABLE="another_value"
+
+# Rest of your script that uses these variables
+echo "My variable is: $MY_VARIABLE"
+echo "Another variable is: $ANOTHER_VARIABLE"
