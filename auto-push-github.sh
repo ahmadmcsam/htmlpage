@@ -1,5 +1,5 @@
 #!/bin/bash
-
+DATE=$(date)
 BRANCH_NAME="original_code"
 # Define the local directory containing your code
 CODE_DIRECTORY="/home/mcsam/Documents/samplefiles/htmlpage"
@@ -14,3 +14,4 @@ git push origin "$BRANCH_NAME"
 
 
 echo "Code has been pushed to GitHub branch: $BRANCH_NAME"
+echo "Code has been pushed to GitHub branch: $DATE"
